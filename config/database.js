@@ -1,42 +1,15 @@
-module.exports = ({ env }) => {
-  //  CONFIGURATION DE LA DB EN PROD
-  if(env('NODE_ENV') === 'production') {
-    return {
-      defaultConnection: 'default',
-      connections: {
-        default: {
-          connector: 'bookshelf',
-          settings: {
-            client: 'sqlite',
-            host: env('DATABASE_HOST'),
-            port: env.int('DATABASE_PORT'),
-            database: env('DATABASE_NAME'),
-            username: env('DATABASE_USERNAME'),
-            password: env('DATABASE_PASSWORD'),
-          },
-          options: {
-            ssl: false,
-          },
-        },
+module.exports = ({ env }) => ({
+  defaultConnection: 'default',
+  connections: {
+    default: {
+      connector: 'bookshelf',
+      settings: {
+        client: 'sqlite',
+        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
       },
-    }
-  }
-​
-  //  CONFIGURATION DE LA DB EN DEV
-  return {
-    defaultConnection: 'default',
-    connections: {
-      default: {
-        connector: 'bookshelf',
-        settings: {
-          client: 'sqlite',
-          filename: env('DATABASE_FILENAME', '.tmp/data.db'),
-        },
-        options: {
-          useNullAsDefault: true,
-        },
+      options: {
+        useNullAsDefault: true,
       },
     },
-  }
-​
-}
+  },
+});
