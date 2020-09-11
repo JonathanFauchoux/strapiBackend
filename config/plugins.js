@@ -2,9 +2,9 @@ module.exports = ({env}) => ({
   téléverser : {
     fournisseur : 'cloudinary',
     providerOptions : {
-      cloud_name : env ('CLOUDINARY_NAME'),
-      api_key : env ('CLOUDINARY_KEY'),
-      api_secret : env ('CLOUDINARY_SECRET'),
+      cloud_name : drv8jbnlx,
+      api_key : 954964162297462,
+      api_secret : S0cpVqo4X3oevQCSs6KE1-bAFv0,
     },
   },
 });
