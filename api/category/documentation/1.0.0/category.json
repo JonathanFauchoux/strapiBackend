@@ -548,6 +548,9 @@
                   "type": "string"
                 },
                 "image": {
+                  "type": "string"
+                },
+                "media": {
                   "type": "array",
                   "items": {
                     "type": "string"
