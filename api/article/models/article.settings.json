@@ -15,8 +15,15 @@
     "content": {
       "type": "richtext"
     },
+    "published_at": {
+      "type": "date"
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -25,13 +32,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "published_at": {
-      "type": "date"
-    },
-    "category": {
-      "model": "category",
-      "via": "articles"
     }
   }
 }

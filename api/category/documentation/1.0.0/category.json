@@ -541,14 +541,17 @@
                 "content": {
                   "type": "string"
                 },
-                "image": {
-                  "type": "string"
-                },
                 "published_at": {
                   "type": "string"
                 },
                 "category": {
                   "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
